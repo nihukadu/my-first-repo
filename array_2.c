@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 int binary_search(int arr[], int n, int key);
-void bubbleShort(int arr[], int n);
+void bubble_short(int arr[], int n);
 
 int main(){
     int n = 7;
     int arr[7] = {64, 25, 12, 22, 11, 90, 5};
-    bubbleShort(arr, 7);
+    bubble_short(arr, 7);
     printf("sorted: \n");
     for(int i = 0; i < n; i++){
         printf("%d\n", arr[i]);
@@ -24,7 +24,7 @@ int main(){
     return 0;
 }
 
-void bubbleShort(int arr[], int n){
+void bubble_short(int arr[], int n){
     for (int i = 0; i < n; i++){
         for(int j = 0; j < n-i-1; j++){
             if(arr[j] > arr[j + 1]){
@@ -50,5 +50,6 @@ int binary_search(int arr[], int n, int key) {
           high = mid - 1;
         }
     }
+    
     return -1;
 }
